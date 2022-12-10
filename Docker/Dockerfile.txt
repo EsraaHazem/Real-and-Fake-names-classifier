@@ -1,0 +1,17 @@
+FROM python:3.8
+
+CMD mkdir  /gui_Name
+
+WORKDIR C:/Users/Esraa/Desktop/Digified
+
+COPY . /gui_Name
+
+WORKDIR /gui_Name
+
+EXPOSE 8501
+
+RUN pip3 install -r requirements.txt
+
+CMD streamlit run deploy.py
+ 
+ 
